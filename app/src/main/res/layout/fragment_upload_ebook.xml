@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.UploadEbookFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/AddEbookPdf"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/add_book"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No file selected"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:id="@+id/pdfName"
+                android:layout_marginBottom="8dp"/>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/EbookTitle"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/UploadEbookBtn"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="12dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shapeAppearance="@style/Rounded"
+                android:text="Upload Ebook"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+
+
+
+        </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/dashboardFragment">
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.collegeappadmin.fragment.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_uploadNoticeFragment"
+            app:destination="@id/uploadNoticeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_uploadImageFragment"
+            app:destination="@id/uploadImageFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_uploadEbookFragment"
+            app:destination="@id/uploadEbookFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_uploadFacultyFragment"
+            app:destination="@id/uploadFacultyFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_deleteNoticeFragment"
+            app:destination="@id/deleteNoticeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_gatePassFragment"
+            app:destination="@id/gatePassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadNoticeFragment"
+        android:name="com.example.collegeappadmin.fragment.UploadNoticeFragment"
+        android:label="fragment_upload_notice"
+        tools:layout="@layout/fragment_upload_notice" >
+
+        <action
+            android:id="@+id/action_uploadNoticeFragment_to_addNoticeFragment"
+            app:destination="@id/addNoticeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadImageFragment"
+        android:name="com.example.collegeappadmin.fragment.UploadImageFragment"
+        android:label="fragment_upload_image"
+        tools:layout="@layout/fragment_upload_image" />
+    <fragment
+        android:id="@+id/uploadEbookFragment"
+        android:name="com.example.collegeappadmin.fragment.UploadEbookFragment"
+        android:label="fragment_upload_ebook"
+        tools:layout="@layout/fragment_upload_ebook" />
+    <fragment
+        android:id="@+id/uploadFacultyFragment"
+        android:name="com.example.collegeappadmin.fragment.UploadFacultyFragment"
+        android:label="fragment_upload_faculty"
+        tools:layout="@layout/fragment_upload_faculty" >
+        <action
+            android:id="@+id/action_uploadFacultyFragment_to_addFacultyFragment"
+            app:destination="@id/addFacultyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteNoticeFragment"
+        android:name="com.example.collegeappadmin.fragment.DeleteNoticeFragment"
+        android:label="fragment_delete_notice"
+        tools:layout="@layout/fragment_delete_notice" />
+    <fragment
+        android:id="@+id/gatePassFragment"
+        android:name="com.example.collegeappadmin.fragment.GatePassFragment"
+        android:label="fragment_gate_pass"
+        tools:layout="@layout/fragment_gate_pass" />
+    <fragment
+        android:id="@+id/addFacultyFragment"
+        android:name="com.example.collegeappadmin.fragment.AddFacultyFragment"
+        android:label="fragment_add_faculty"
+        tools:layout="@layout/fragment_add_faculty" />
+    <fragment
+        android:id="@+id/addNoticeFragment"
+        android:name="com.example.collegeappadmin.fragment.AddNoticeFragment"
+        android:label="fragment_add_notice"
+        tools:layout="@layout/fragment_add_notice" />
+
+</navigation>
