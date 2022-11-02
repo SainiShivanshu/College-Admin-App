@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.collegeappadmin.activity.FullImageActivity
 import com.example.collegeappadmin.databinding.NoticeImageLayoutBinding
-import com.example.collegeappadmin.databinding.NoticeListBinding
+
 
 class NoticeImageAdapter(val context: Context, val list: ArrayList<String>)
     :RecyclerView.Adapter<NoticeImageAdapter.NoticeImageViewHolder>(){

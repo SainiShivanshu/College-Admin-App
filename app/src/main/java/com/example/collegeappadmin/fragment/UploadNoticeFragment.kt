@@ -13,6 +13,7 @@ import com.example.collegeappadmin.R
 import com.example.collegeappadmin.databinding.FragmentUploadNoticeBinding
 import com.example.collegeappadmin.model.AddNoticeModel
 import com.example.collegeappadmin.model.UploadImageModel
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -34,6 +35,7 @@ class UploadNoticeFragment : Fragment() {
         val  notice = ArrayList<AddNoticeModel>()
 
         Firebase.firestore.collection("Notices")
+            .orderBy("timestamp",Query.Direction.DESCENDING)
             .get()
             .addOnSuccessListener {
 

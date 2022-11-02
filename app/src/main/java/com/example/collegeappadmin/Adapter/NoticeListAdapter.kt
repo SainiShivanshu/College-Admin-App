@@ -26,6 +26,7 @@ class NoticeListAdapter (val context:Context,val list:ArrayList<AddNoticeModel>)
         }
 
         override fun onBindViewHolder(holder: NoticeListViewHolder, position: Int) {
+
             holder.binding.NoticeDesc.text=list[position].noticeDesc
             holder.binding.NoticeDate.text=list[position].date
             holder.binding.NoticeTime.text=list[position].time

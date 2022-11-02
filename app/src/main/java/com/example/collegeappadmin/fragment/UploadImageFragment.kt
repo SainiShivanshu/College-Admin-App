@@ -21,6 +21,7 @@ import com.example.collegeappadmin.R
 import com.example.collegeappadmin.databinding.FragmentUploadImageBinding
 
 import com.example.collegeappadmin.model.UploadImageModel
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -58,7 +59,7 @@ class UploadImageFragment : Fragment() {
         binding=FragmentUploadImageBinding.inflate(layoutInflater)
         (activity as AppCompatActivity).supportActionBar?.title="Add Images"
 
-        items= arrayListOf("Select Category","Convocation","Republic Day","Independence Day","Gandhi Jayanti","Urjostav","Others")
+        items= arrayListOf("Select Category","Convocation","Republic Day","Independence Day","Gandhi Jayanti","Urjostav","Slider","Others")
         val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item_layout,items)
         binding.dropdown.adapter=arrayAdapter
 
@@ -141,7 +142,9 @@ class UploadImageFragment : Fragment() {
 
         val data = UploadImageModel(
             category,
-            listImages
+            key,
+            listImages,
+            FieldValue.serverTimestamp()
         )
 
         db.document(key).set(data).addOnSuccessListener {

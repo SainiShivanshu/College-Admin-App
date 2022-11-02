@@ -13,10 +13,10 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.collegeappadmin.Adapter.AddNoticeAdapter
-import com.example.collegeappadmin.R
-import com.example.collegeappadmin.databinding.FragmentAddFacultyBinding
 import com.example.collegeappadmin.databinding.FragmentAddNoticeBinding
 import com.example.collegeappadmin.model.AddNoticeModel
+import com.google.firebase.firestore.FieldValue
+
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -130,15 +130,16 @@ class AddNoticeFragment : Fragment() {
             listImages.add("")
         }
 
+
         val data = AddNoticeModel(
             key,
             date,
             time1,
             binding.NoticeTitle.text.toString(),
             binding.NoticeDesc.text.toString(),
-            listImages
+            listImages,
+            FieldValue.serverTimestamp()
         )
-
         db.document(key).set(data).addOnSuccessListener {
             dialog.dismiss()
             Toast.makeText(requireContext(),"Notice Uploaded", Toast.LENGTH_SHORT).show()
