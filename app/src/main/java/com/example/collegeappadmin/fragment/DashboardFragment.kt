@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.collegeappadmin.R
 import com.example.collegeappadmin.databinding.FragmentDashboardBinding
 
@@ -20,16 +21,19 @@ class DashboardFragment : Fragment() {
         // Inflate the layout for this fragment
         binding=FragmentDashboardBinding.inflate(layoutInflater)
         (activity as AppCompatActivity).supportActionBar?.title="Dashboard"
+
+
+
         binding.UploadNotice.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_uploadNoticeFragment)
         }
 
         binding.UploadImage.setOnClickListener{
-            findNavController().navigate(R.id.action_dashboardFragment_to_uploadImageFragment)
+            findNavController().navigate(R.id.action_dashboardFragment_to_galleryFragment)
         }
 
         binding.uploadEbook.setOnClickListener {
-            findNavController().navigate(R.id.action_dashboardFragment_to_uploadEbookFragment)
+            findNavController().navigate(R.id.action_dashboardFragment_to_ebookFragment)
         }
 
         binding.UpdateFaculty.setOnClickListener {

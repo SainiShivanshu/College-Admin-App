@@ -35,11 +35,13 @@ class FacultyAdapter(val context:Context,val list:ArrayList<AddFacultyModel>)
         holder.binding.facultyName.text=list[position].name
         holder.binding.facultyPost.text=list[position].post
         holder.binding.facultyEmail.text=list[position].email
+        holder.binding.facultyMobileNo.text=list[position].mobileNo
         Glide.with(context).load(list[position].image).into(holder.binding.facultyImage)
 
 
 
         holder.itemView.setOnClickListener {
+
             val view = LayoutInflater.from(context).inflate(R.layout.faculty_extra_options_layout,null)
             val binding:FacultyExtraOptionsLayoutBinding= FacultyExtraOptionsLayoutBinding.bind(view)
 
@@ -47,14 +49,18 @@ class FacultyAdapter(val context:Context,val list:ArrayList<AddFacultyModel>)
                 .setTitle("Options")
                 .setView(binding.root)
                 .create()
-dialog.show()
+
+            dialog.show()
+
             binding.update.setOnClickListener {
                 val intent = Intent(context,UpdateFacultyActivity::class.java)
                 intent.putExtra("email",list[position].email)
                 context.startActivity(intent)
                 dialog.dismiss()
             }
-
+            binding.cancel.setOnClickListener {
+                dialog.dismiss()
+            }
             binding.remove.setOnClickListener {
                 Firebase.firestore.collection("Faculty")
                 .document(list[position].email.toString())

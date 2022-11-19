@@ -5,17 +5,30 @@
       <map>
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/drawable-v24/ic_add.xml" value="0.193" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/drawable-v24/ic_delete.xml" value="0.19" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/drawable/bg_view.xml" value="0.1925" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/drawable/ic_download.xml" value="0.1" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/drawable/ic_pdf.xml" value="0.124" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/drawable/ic_search.xml" value="0.1" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/font/font.xml" value="0.25925925925925924" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/activity_full_image.xml" value="0.25" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/activity_local_gate_pass.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/activity_out_of_station.xml" value="0.2463768115942029" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/activity_out_of_station_list.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/activity_update_faculty.xml" value="0.2359375" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/complain.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/delete_ebook.xml" value="0.2105978260869565" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/delete_image_layout.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/dropdown_item_layout.xml" value="0.1" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/faculty_extra_options_layout.xml" value="0.25" />
-        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/faculty_item_layout.xml" value="0.2" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/faculty_item_layout.xml" value="0.1" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_add_faculty.xml" value="0.2" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_add_notice.xml" value="0.25" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_complain.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_delete_notice.xml" value="0.25" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_ebook.xml" value="0.1" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_gate_pass.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_home.xml" value="0.2359375" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_update_faculty.xml" value="0.2359375" />
@@ -24,12 +37,19 @@
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_upload_image.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/fragment_upload_notice.xml" value="0.20532319391634982" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/full_image.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/gallery_image.xml" value="0.25" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/gate_pass_layout.xml" value="0.4" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/image_item.xml" value="0.1" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/local_gate_pass.xml" value="0.264" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/no_data_found.xml" value="0.2" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/notice_image_layout.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/notice_list.xml" value="0.264" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/out_of_station_gate_pass.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/pdf_list.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/progress_layout.xml" value="0.264" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/layout/shimmer_for_ebook.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/menu/menu.xml" value="0.264" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeAppAdmin/app/src/main/res/menu/search.xml" value="0.1" />
       </map>
     </option>
   </component>

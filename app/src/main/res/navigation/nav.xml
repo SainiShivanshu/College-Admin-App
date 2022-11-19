@@ -13,12 +13,6 @@
             android:id="@+id/action_dashboardFragment_to_uploadNoticeFragment"
             app:destination="@id/uploadNoticeFragment" />
         <action
-            android:id="@+id/action_dashboardFragment_to_uploadImageFragment"
-            app:destination="@id/uploadImageFragment" />
-        <action
-            android:id="@+id/action_dashboardFragment_to_uploadEbookFragment"
-            app:destination="@id/uploadEbookFragment" />
-        <action
             android:id="@+id/action_dashboardFragment_to_uploadFacultyFragment"
             app:destination="@id/uploadFacultyFragment" />
         <action
@@ -27,6 +21,12 @@
         <action
             android:id="@+id/action_dashboardFragment_to_gatePassFragment"
             app:destination="@id/gatePassFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_ebookFragment"
+            app:destination="@id/ebookFragment" />
     </fragment>
     <fragment
         android:id="@+id/uploadNoticeFragment"
@@ -59,9 +59,9 @@
     </fragment>
     <fragment
         android:id="@+id/deleteNoticeFragment"
-        android:name="com.example.collegeappadmin.fragment.DeleteNoticeFragment"
+        android:name="com.example.collegeappadmin.fragment.ComplainFragment"
         android:label="fragment_delete_notice"
-        tools:layout="@layout/fragment_delete_notice" />
+        tools:layout="@layout/fragment_complain" />
     <fragment
         android:id="@+id/gatePassFragment"
         android:name="com.example.collegeappadmin.fragment.GatePassFragment"
@@ -77,5 +77,23 @@
         android:name="com.example.collegeappadmin.fragment.AddNoticeFragment"
         android:label="fragment_add_notice"
         tools:layout="@layout/fragment_add_notice" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.collegeappadmin.fragment.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_uploadImageFragment"
+            app:destination="@id/uploadImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ebookFragment"
+        android:name="com.example.collegeappadmin.fragment.EbookFragment"
+        android:label="fragment_ebook"
+        tools:layout="@layout/fragment_ebook" >
+        <action
+            android:id="@+id/action_ebookFragment_to_uploadEbookFragment"
+            app:destination="@id/uploadEbookFragment" />
+    </fragment>
 
 </navigation>

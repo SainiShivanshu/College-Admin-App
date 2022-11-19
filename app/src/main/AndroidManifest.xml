@@ -16,6 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeAppAdmin"
         tools:targetApi="31">
+
+        <activity
+            android:name=".activity.OutOfStationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LocalGatePassActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.FullImageActivity"
             android:exported="false" />

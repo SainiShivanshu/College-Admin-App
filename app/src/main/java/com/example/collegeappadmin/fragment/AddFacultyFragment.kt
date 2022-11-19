@@ -103,6 +103,10 @@ private lateinit var binding:FragmentAddFacultyBinding
             binding.facultyEmail.requestFocus()
             binding.facultyEmail.error="Empty"
         }
+        else if(binding.facultymoblileNo.text.toString().isEmpty()){
+            binding.facultymoblileNo.requestFocus()
+            binding.facultymoblileNo.error="Empty"
+        }
         else if(binding.facultyPost.text.toString().isEmpty()){
             binding.facultyPost.requestFocus()
             binding.facultyPost.error="Empty"
@@ -171,6 +175,7 @@ private lateinit var binding:FragmentAddFacultyBinding
             key,
             binding.FacultyName.text.toString(),
             binding.facultyEmail.text.toString(),
+            binding.facultymoblileNo.text.toString(),
             binding.facultyPost.text.toString(),
             department,
             image
@@ -182,6 +187,7 @@ private lateinit var binding:FragmentAddFacultyBinding
             binding.facultyEmail.text=null
             binding.facultyPost.text=null
             binding.facultyDepartment.setSelection(0)
+            binding.facultymoblileNo.text=null
             department=null
 //           binding.facultyImage.setImageURI(uri)
 

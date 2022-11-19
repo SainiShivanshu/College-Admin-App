@@ -15,10 +15,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.collegeappadmin.Adapter.AddNoticeAdapter
 import com.example.collegeappadmin.databinding.FragmentAddNoticeBinding
 import com.example.collegeappadmin.model.AddNoticeModel
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.firestore.FieldValue
 
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.storage.FirebaseStorage
 import java.text.SimpleDateFormat
 import java.util.*
@@ -130,31 +132,35 @@ class AddNoticeFragment : Fragment() {
             listImages.add("")
         }
 
-
-        val data = AddNoticeModel(
-            key,
-            date,
-            time1,
-            binding.NoticeTitle.text.toString(),
-            binding.NoticeDesc.text.toString(),
-            listImages,
-            FieldValue.serverTimestamp()
-        )
-        db.document(key).set(data).addOnSuccessListener {
-            dialog.dismiss()
-            Toast.makeText(requireContext(),"Notice Uploaded", Toast.LENGTH_SHORT).show()
-            binding.NoticeTitle.text=null
-            binding.NoticeDesc.text=null
-            i=0
-            list.clear()
-            listImages.clear()
-            adapter.notifyDataSetChanged()
-
-        }
-            .addOnFailureListener {
+            val data = AddNoticeModel(
+                key,
+                date,
+                time1,
+                binding.NoticeTitle.text.toString(),
+                binding.NoticeDesc.text.toString(),
+                listImages,
+                FieldValue.serverTimestamp()
+            )
+            db.document(key).set(data).addOnSuccessListener {
                 dialog.dismiss()
-                Toast.makeText(requireContext(),"Something Went Wrong", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Notice Uploaded", Toast.LENGTH_SHORT).show()
+                binding.NoticeTitle.text=null
+                binding.NoticeDesc.text=null
+                i=0
+                list.clear()
+                listImages.clear()
+                adapter.notifyDataSetChanged()
+
+
+
             }
+                .addOnFailureListener {
+                    dialog.dismiss()
+                    Toast.makeText(requireContext(),"Something Went Wrong", Toast.LENGTH_SHORT).show()
+                }
+
+
+
     }
 
 }

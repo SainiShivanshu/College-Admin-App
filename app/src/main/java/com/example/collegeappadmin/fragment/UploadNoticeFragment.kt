@@ -1,24 +1,22 @@
 package com.example.collegeappadmin.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
-import com.example.collegeappadmin.Adapter.AddNoticeAdapter
 import com.example.collegeappadmin.Adapter.NoticeListAdapter
 import com.example.collegeappadmin.R
 import com.example.collegeappadmin.databinding.FragmentUploadNoticeBinding
 import com.example.collegeappadmin.model.AddNoticeModel
-import com.example.collegeappadmin.model.UploadImageModel
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class UploadNoticeFragment : Fragment() {
@@ -32,6 +30,7 @@ class UploadNoticeFragment : Fragment() {
         binding = FragmentUploadNoticeBinding.inflate(layoutInflater)
 
         (activity as AppCompatActivity).supportActionBar?.title = "Add Notice"
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val  notice = ArrayList<AddNoticeModel>()
 
         Firebase.firestore.collection("Notices")
@@ -54,6 +53,7 @@ class UploadNoticeFragment : Fragment() {
 
         return binding.root
     }
+
 
 
 

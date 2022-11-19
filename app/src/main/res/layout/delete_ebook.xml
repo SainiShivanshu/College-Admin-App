@@ -4,29 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<com.google.android.material.textview.MaterialTextView
-    android:id="@+id/update"
-    android:text="Update Info"
-    android:textAlignment="textEnd"
-    android:textColor="@color/black"
-    android:textSize="16sp"
-    android:fontFamily="@font/roboto_medium"
-    android:clickable="true"
-    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
-    android:textStyle="bold|normal"
-    android:padding="10dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
-
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/remove"
-        android:text="Remove Faculty"
+        android:id="@+id/delete"
+        android:text="Delete Ebook"
         android:textAlignment="textEnd"
         android:textColor="@color/black"
-        android:fontFamily="@font/roboto_medium"
         android:textSize="16sp"
-        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+        android:fontFamily="@font/roboto_medium"
         android:clickable="true"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
         android:textStyle="bold|normal"
         android:padding="10dp"
         android:layout_width="match_parent"
@@ -45,5 +31,7 @@
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+
 
 </LinearLayout>
