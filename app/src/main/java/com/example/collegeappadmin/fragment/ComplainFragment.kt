@@ -28,7 +28,7 @@ private lateinit var binding:FragmentComplainBinding
 
 
         (activity as AppCompatActivity).supportActionBar?.title="Complains"
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         var list = ArrayList<Complain>()
 

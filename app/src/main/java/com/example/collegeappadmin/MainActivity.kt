@@ -7,6 +7,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.example.collegeappadmin.databinding.ActivityMainBinding
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -17,7 +21,25 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(
+            OnCompleteListener {
+                if(!it.isSuccessful)
+                    return@OnCompleteListener
 
+
+                val map = hashMapOf<String,Any>()
+
+                map["token"]=it.result
+                Firebase.firestore.collection("Admin")
+                    .document("token")
+                    .set(map).addOnSuccessListener {
+
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
+                    }
+
+            })
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 

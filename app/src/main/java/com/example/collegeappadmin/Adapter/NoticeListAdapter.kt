@@ -56,6 +56,8 @@ class NoticeListAdapter (val context:Context,val list:ArrayList<AddNoticeModel>)
 
                     }
             }
+
+
         }
 
         override fun getItemCount(): Int {

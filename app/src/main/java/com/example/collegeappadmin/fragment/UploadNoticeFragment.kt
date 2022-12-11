@@ -30,7 +30,7 @@ class UploadNoticeFragment : Fragment() {
         binding = FragmentUploadNoticeBinding.inflate(layoutInflater)
 
         (activity as AppCompatActivity).supportActionBar?.title = "Add Notice"
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val  notice = ArrayList<AddNoticeModel>()
 
         Firebase.firestore.collection("Notices")

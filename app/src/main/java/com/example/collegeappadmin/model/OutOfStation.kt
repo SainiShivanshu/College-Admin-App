@@ -14,6 +14,8 @@ data class OutOfStation(
     var status:String?="",
     val date: String?="",
     val timeOut:String?="",
-    val timeIn:String?=""
+    val timeIn:String?="",
+
+    val emailId:String=""
 
 )

@@ -13,9 +13,15 @@ import com.example.collegeappadmin.databinding.FacultyExtraOptionsLayoutBinding
 import com.example.collegeappadmin.databinding.GatePassLayoutBinding
 import com.example.collegeappadmin.databinding.LocalGatePassBinding
 import com.example.collegeappadmin.model.LocalGatePass
+import com.example.collegeappadmin.model.UserModel
+import com.example.collegeappadmin.notification.NotificationData
+import com.example.collegeappadmin.notification.PushNotification
+import com.example.collegeappadmin.notification.api.ApiUtilities
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.NonDisposableHandle.parent
+import retrofit2.Call
+import retrofit2.Callback
 
 class GatePassAdapter(val context: Context, val list:ArrayList<LocalGatePass>)
     :RecyclerView.Adapter<GatePassAdapter.GatePassViewHolder>(){
@@ -49,6 +55,7 @@ class GatePassAdapter(val context: Context, val list:ArrayList<LocalGatePass>)
             .create()
         dialog.show()
        binding.name.text=list[position].name
+            binding.email.text=list[position].emailId
         binding.MobileNo.text=list[position].rollNo
         binding.rollNo.text=list[position].rollNo
        binding.branch.text=list[position].branch
@@ -74,6 +81,9 @@ class GatePassAdapter(val context: Context, val list:ArrayList<LocalGatePass>)
                         holder.binding.status.text="Granted"
                         list[position].status="Granted"
                         holder.binding.indicator.visibility=GONE
+
+                        sendNotification(list[position].id,list[position].emailId)
+
                     }
                     .addOnFailureListener {
                         Toast.makeText(context,"something went wrong",Toast.LENGTH_SHORT).show()
@@ -96,12 +106,80 @@ class GatePassAdapter(val context: Context, val list:ArrayList<LocalGatePass>)
                         holder.binding.status.text="Ungranted"
                         list[position].status="Ungranted"
                         holder.binding.indicator.visibility=GONE
+                        sendNotification1(list[position].id,list[position].emailId)
+
                     }
                     .addOnFailureListener {
                         Toast.makeText(context,"something went wrong",Toast.LENGTH_SHORT).show()
                     }
             }
         }
+    }
+
+    private fun sendNotification1(id: String?, emailId: String) {
+        Firebase.firestore.collection("Users").document(emailId)
+            .get().addOnSuccessListener {
+                val   data=it.toObject(UserModel::class.java)
+
+
+                val notificationData= PushNotification(
+                    NotificationData("Local Gate Pass UnGranted", id),
+                    data!!.token.toString()
+                )
+
+                ApiUtilities.getInstance().sendNotification(
+                    notificationData
+                ).enqueue(object : Callback<PushNotification> {
+                    override fun onResponse(
+                        call: Call<PushNotification>,
+                        response: retrofit2.Response<PushNotification>
+                    ) {
+                        Toast.makeText(context,data.token.toString()
+                            ,Toast.LENGTH_SHORT).show()
+                    }
+
+                    override fun onFailure(call: Call<PushNotification>, t: Throwable) {
+                        Toast.makeText(context,"Something Went Wrong"
+                            ,Toast.LENGTH_SHORT).show()
+                    }
+
+                })
+            }
+
+    }
+
+    private fun sendNotification(id: String?, emailId: String) {
+
+        Firebase.firestore.collection("Users").document(emailId)
+            .get().addOnSuccessListener {
+                val   data=it.toObject(UserModel::class.java)
+
+
+                val notificationData= PushNotification(
+                    NotificationData("Local Gate Pass Granted", id),
+                   data!!.token.toString()
+                )
+
+                ApiUtilities.getInstance().sendNotification(
+                    notificationData
+                ).enqueue(object : Callback<PushNotification> {
+                    override fun onResponse(
+                        call: Call<PushNotification>,
+                        response: retrofit2.Response<PushNotification>
+                    ) {
+                        Toast.makeText(context,data.token.toString()
+                            ,Toast.LENGTH_SHORT).show()
+                    }
+
+                    override fun onFailure(call: Call<PushNotification>, t: Throwable) {
+                        Toast.makeText(context,"Something Went Wrong"
+                            ,Toast.LENGTH_SHORT).show()
+                    }
+
+                })
+            }
+
+
     }
 
     override fun getItemCount(): Int {

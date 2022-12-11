@@ -61,6 +61,7 @@ if(list[position].status=="Pending")      holder.binding.indicator.visibility=Vi
             binding.place.text=list[position].place
             binding.overnightStay.text=list[position].overNightStayInformation
             binding.status.text=list[position].status
+            binding.email.text=list[position].emailId
             binding.TimeIn.text=list[position].timeIn
 
 

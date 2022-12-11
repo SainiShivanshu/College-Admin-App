@@ -38,6 +38,7 @@ class ComplainAdapter(val context: Context, val list:ArrayList<Complain>)
 
 
         if(list[position].status=="In process"){
+
             holder.binding.indicator.visibility= View.VISIBLE
             holder.binding.indicator.setCardBackgroundColor(R.color.green)
         }
